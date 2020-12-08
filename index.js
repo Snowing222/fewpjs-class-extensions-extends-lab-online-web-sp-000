@@ -18,11 +18,7 @@ class Triangle extends Polygon {
         if(super.countSides === 3 && this.sides.every(a=>a>0)){
         
             const [a,b,c] = this.sides.sort()
-        
-            if(a+b>c){
-                return true
-            }
-            return false
+            return a + b > c
             }else{
                 return false
             }
@@ -34,10 +30,7 @@ class Square extends Polygon{
     get isValid(){
         if(super.countSides === 4 && this.sides.every(a=>a>0)){
             const [a,b,c,d] = this.sides
-            if(a===b && b===c && c===d){
-                return true
-            }
-            return false
+            return a===b && b===c && c===d
         }else{
             return false
         }
